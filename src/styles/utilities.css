@@ -1,0 +1,6 @@
+.page__container {
+  height: calc(100vh - 100px);
+}
+.full_page__container {
+  height: 100vh;
+}
