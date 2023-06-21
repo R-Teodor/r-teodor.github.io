@@ -9,10 +9,10 @@ const Contact = () => {
     name: Yup.string()
       .max(50, 'The name is too long')
       .required('Name is Required'),
-    email: Yup.string().email('Invalid Email').required('Email is required'),
+    email: Yup.string().email('Invalid Email').required('Email is Required'),
     message: Yup.string()
       .max(200, 'Message has reached the max limit')
-      .required('Message is required'),
+      .required('Message is Required'),
   })
   return (
     <div className=' contact__container' id='experience_page'>
@@ -27,17 +27,20 @@ const Contact = () => {
           validateOnChange={true}
           validateOnBlur={true}
           // Submit
-          onSubmit={(values) => console.log(values)}
+          onSubmit={() => undefined}
         >
           {({
             values,
             errors,
             touched,
-            handleSubmit,
+            // handleSubmit,
             handleChange,
             handleBlur,
           }) => (
-            <form onSubmit={handleSubmit}>
+            <form
+              action='https://getform.io/f/dd148e5d-5a65-42ac-acf2-47ed7aaff14e'
+              method='POST'
+            >
               <div className='form__group'>
                 <label
                   htmlFor='name'
@@ -113,7 +116,7 @@ const Contact = () => {
                 <textarea
                   name='message'
                   id='message'
-                  placeholder='Your kind Words'
+                  placeholder='Your kind words'
                   cols={30}
                   rows={10}
                   value={values.message}

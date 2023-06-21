@@ -17,6 +17,7 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 import { FaChevronDown } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const skillsRef = useRef<HTMLDivElement>(null)
@@ -44,9 +45,9 @@ const Home = () => {
           >
             <FaGithub />
           </a>
-          <a href='mailto:tcv@gmail.com'>
+          <Link to='/contact'>
             <MdEmail />
-          </a>
+          </Link>
           <p
             className='prompt__chevrone'
             onClick={() =>

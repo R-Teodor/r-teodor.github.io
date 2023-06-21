@@ -4,3 +4,14 @@
 .full_page__container {
   height: 100vh;
 }
+
+.bold {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

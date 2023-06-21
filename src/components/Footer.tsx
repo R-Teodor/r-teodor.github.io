@@ -2,6 +2,7 @@ import '../styles/Footer.css'
 
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -22,9 +23,9 @@ const Footer = () => {
           <FaGithub />
         </a>
 
-        <a href='mailto:demo@gmail.com'>
+        <Link to='contact'>
           <MdEmail />
-        </a>
+        </Link>
       </div>
       {/* <p>&copy; Domain name</p> */}
     </div>

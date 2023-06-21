@@ -138,6 +138,28 @@ a {
   font-size: 70px;
   padding-block: 16px;
 }
+.cutoff-text {
+  --max-lines: 10;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+}
+.expand-text {
+  --max-lines: 19;
+}
+
+.description__expand-btn {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 16px;
+  transition: all 0.15s;
+}
+.description__expand-btn:hover {
+  background-color: rgba(128, 128, 128, 0.075);
+}
 
 @media only screen and (max-width: 1200px) {
   .projects__layout {
@@ -185,8 +207,14 @@ a {
     width: 260px;
     height: auto;
   }
-  .project__stack,
+  /* .project__stack,
   .project__stack-title {
+    display: none;
+  } */
+  .project__stack {
+    height: auto;
+  }
+  .project__stack-item > p {
     display: none;
   }
   .project__links {

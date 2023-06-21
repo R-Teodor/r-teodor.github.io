@@ -13,9 +13,15 @@ const Navbar = () => {
         </button>
       </div>
       <div className='links'>
-        <Link to='/'>Home</Link>
-        <Link to='/projects'>Projects</Link>
-        <Link to='/experience'>Contact</Link>
+        <Link to='/' onClick={() => setExtendNavbar(false)}>
+          Home
+        </Link>
+        <Link to='/projects' onClick={() => setExtendNavbar(false)}>
+          Projects
+        </Link>
+        <Link to='/contact' onClick={() => setExtendNavbar(false)}>
+          Contact
+        </Link>
       </div>
     </div>
   )
